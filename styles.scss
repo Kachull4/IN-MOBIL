@@ -1,0 +1,383 @@
+$width: 120rem;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+}
+body {
+  font-family: "Sanchez", serif;
+  font-size: 1.8rem;
+  color: black;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  color: #ffde29;
+  text-decoration: none;
+}
+.a__footer {
+  text-align: center;
+  color: #ffde29;
+  text-decoration: underline;
+}
+.container {
+  max-width: $width;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title {
+  font-family: "Josefin Sans", sans-serif;
+
+  &--h1 {
+    font-size: 7rem;
+    color: #ffde29;
+  }
+  &--h2 {
+    font-size: 5rem;
+    margin: 0 0 2rem;
+  }
+  &--h3 {
+    font-size: 3rem;
+    text-align: right;
+  }
+
+  &--cenik {
+    text-align: left;
+    margin: 5rem 0 2rem;
+  }
+}
+header {
+  padding-bottom: 20rem;
+  padding-top: 10rem;
+  min-height: 30vw;
+  background-color: #ffde29;
+  background-image: url(photo1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: soft-light;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: 20rem solid white;
+    border-right: 100vw solid transparent;
+    border-left: 0 solid transparent;
+  }
+}
+.intro {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 2em 3rem;
+}
+.section {
+  padding: 10rem;
+
+  &--light {
+    background-color: white;
+  }
+  &--dark {
+    background-color: #ffde29;
+  }
+}
+.logo {
+  margin: 0;
+  position: absolute;
+  padding-left: 4rem;
+  padding-top: 4rem;
+}
+.main-menu {
+  text-align: right;
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  background-color: black;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    border-top: 10rem solid black;
+    border-right: 100vw solid transparent;
+    border-left: 0 solid transparent;
+  }
+
+  &__list {
+    margin: 0;
+  }
+  &__item {
+    display: inline;
+  }
+  &__link {
+    padding: 2rem;
+    display: inline-block;
+  }
+  &__link:hover {
+    color: black;
+    background-color: #ffde29;
+  }
+}
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  position: relative;
+  margin-top: -25rem;
+
+  &__title {
+    margin-top: 0;
+    padding-top: 0.4em;
+  }
+  &__item {
+    list-style: none;
+    background-color: black;
+    vertical-align: middle;
+    padding: 2rem;
+    font-size: 2rem;
+    color: #ffde29;
+    border-radius: 2rem;
+  }
+  img {
+    width: 1.5em;
+    float: left;
+    margin-top: -0.4em;
+  }
+}
+
+.repair {
+  background-color: #ffde29;
+  /*následující obrázek bude nahrazen*/
+  background-image: url(repair3.png);
+  background-repeat: no-repeat;
+  background-size: 50% auto;
+  background-position: right top;
+
+  &__list {
+    padding-right: 50%;
+  }
+}
+.prices {
+  padding-right: 50%;
+}
+table {
+  border-spacing: 0;
+  margin-bottom: 5rem;
+}
+td {
+  border-bottom: 1px solid black;
+  text-align: left;
+  padding: 10px 0;
+}
+.price {
+  text-align: right;
+  padding-left: 50px;
+}
+.swiper {
+  &-container {
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.button {
+  text-decoration: none;
+  color: inherit;
+  padding: 2rem;
+  border: 1px solid black;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: 500;
+  margin: 1rem;
+  display: inline-block;
+  width: 15rem;
+
+  &--touch {
+    color: black;
+  }
+  &-row {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+  &--facebook {
+    color: white;
+    background-color: #1877f2;
+    border-color: #1877f2;
+  }
+}
+.columns {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 0 -10rem -10rem;
+  align-items: center;
+}
+.contacts {
+  width: 100%;
+  max-width: $width/2;
+  margin-left: auto;
+  &__img {
+    padding-right: 2rem;
+    margin-left: -4.4rem;
+  }
+  &__item {
+    padding-left: 4.4rem;
+  }
+}
+.map {
+  display: block;
+  width: 100%;
+  height: 20vw;
+}
+.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: black;
+  text-align: center;
+
+  &__text {
+    font-size: 3rem;
+
+    color: #ffde29;
+  }
+  &__a:hover {
+    text-decoration: underline;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    font-size: 1.3rem;
+  }
+  .section {
+    padding: 3rem;
+  }
+  .main-menu {
+    font-size: 2rem;
+
+    &::before {
+      display: none;
+    }
+    &__list {
+      display: flex;
+      max-width: 100vw;
+      overflow: scroll;
+      margin-left: -3rem;
+    }
+    &__link {
+      padding: 1rem;
+    }
+  }
+  .logo {
+    color: black;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .services {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  .repair {
+    background-image: none;
+
+    &__list {
+      padding: 0;
+    }
+  }
+  .prices {
+    width: 40rem;
+  }
+  .swiper-container {
+    max-width: 30rem;
+    margin-top: 1rem;
+    margin-bottom: 9rem;
+  }
+  .columns {
+    grid-template-columns: 100%;
+  }
+  .contacts {
+    margin-left: 9rem;
+  }
+  .map {
+    height: 30vw;
+  }
+  .footer {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 1.5rem;
+  }
+  .section {
+    padding: 3rem;
+  }
+  .main-menu {
+    font-size: 2rem;
+
+    &__list {
+      display: flex;
+      max-width: 100vw;
+      overflow: scroll;
+      margin-left: -3rem;
+    }
+    &__link {
+      padding: 1rem;
+    }
+  }
+  .logo {
+    font-size: 4rem;
+    margin: 2rem 0 0 -2.2rem;
+  }
+  .services {
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+  .repair {
+    background-image: none;
+
+    &__list {
+      padding: 2rem;
+    }
+  }
+  .prices {
+    width: 60rem;
+  }
+  .swiper-container {
+    max-width: 45rem;
+    margin-top: 1rem;
+    margin-bottom: 9rem;
+  }
+  .columns {
+    grid-template-columns: 100%;
+  }
+  .contacts {
+    margin-left: 9rem;
+  }
+  .map {
+    height: 30vw;
+  }
+  .footer {
+    padding: 1rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+}
