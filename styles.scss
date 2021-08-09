@@ -22,11 +22,6 @@ nav a {
   color: black;
   text-decoration: none;
 }
-footer a {
-  text-align: center;
-  color: $text;
-  text-decoration: underline;
-}
 .container {
   max-width: $width;
   margin-left: auto;
@@ -34,18 +29,27 @@ footer a {
 }
 .section {
   padding: 10rem;
+
+  &--services {
+    background: #535353;
+    padding-bottom: 1rem;
+  }
+  &--contacts {
+    background-color: #fff;
+  }
 }
 .title {
   &--h1 {
     text-transform: uppercase;
     background: #000000 0% 0% no-repeat padding-box;
     opacity: 1;
-    font-size: 2.7rem;
+    font-size: 2.3rem;
     font-weight: 600;
     color: white;
     border-bottom: 1rem solid #ffde29;
   }
   &--h2 {
+    font-weight: 300;
     font-size: 5rem;
     margin: 0 0 2rem;
     color: black;
@@ -57,6 +61,8 @@ footer a {
   }
 
   &--prices {
+    font-weight: 300;
+    font-size: 3.7rem;
     text-align: left;
     margin: 5rem 0 2rem;
   }
@@ -65,18 +71,15 @@ header {
   padding-bottom: 20rem;
   padding-top: 10rem;
   min-height: 30vw;
-  background-color: $text;
-  background-image: url(/Images/header.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-blend-mode: soft-light;
+  background: url(/Images/transition-bottom-left.svg) center bottom/100% auto
+      no-repeat,
+    $text url(/Images/header.png) center bottom/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  opacity: 0.75;
+  min-height: 40vw;
 }
 .intro {
   color: #ffffff;
@@ -95,7 +98,7 @@ header {
 }
 .main-menu {
   text-align: right;
-  font-size: 2.1rem;
+  font-size: 1.7rem;
   font-family: sans-serif;
   font-weight: 600;
   background-color: white;
@@ -148,7 +151,7 @@ header {
     border-radius: 3.8rem 0;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
-  img {
+  &__icon {
     width: 6rem;
     padding: 1rem;
     background-color: #ffde29;
@@ -160,70 +163,54 @@ header {
   }
 }
 .repair {
-  background-image: url(/Images/repair3.png);
-  background-repeat: no-repeat;
-  background-size: 50% auto;
-  background-position: right top;
+  background: url(/Images/transition-top-right.svg) center top/100% auto
+      no-repeat,
+    url(/Images/transition-bottom-right.svg) center bottom/100% auto no-repeat,
+    url(/Images/repair3.png) right top/50% auto no-repeat;
 
   &__list {
     padding-right: 50%;
-    list-style: disc;
+    list-style-image: url(/Images/list_ico.svg);
   }
   &__item {
     padding: 1rem;
-    border-bottom: 0.2rem dashed grey;
+    border-bottom: 0.2rem dashed rgba(0, 0, 0, 0.1);
   }
 }
 .prices {
   &__table {
     border-spacing: 0;
     margin-bottom: 5rem;
+  }
+  &__item {
+    color: #535353;
+    padding: 0 1.5rem;
+    text-align: center;
 
-    &--td {
-      border-right: 0.2rem dashed grey;
-      text-align: left;
-      padding: 0 3rem;
+    &:not(:last-child) {
+      border-right: 0.2rem dashed rgba(0, 0, 0, 0.1);
     }
   }
 }
-td {
-  padding: 0 2rem;
+.operation {
+  font-size: 2.2rem;
+  width: min-content;
+  display: inline-block;
 }
 .price {
+  display: inline-block;
+  color: #000;
+  font-weight: 600;
   font-size: 1.4rem;
+  margin-top: 0;
+  padding: 0.5rem 0.8rem;
   text-align: center;
   background-color: #ffde29;
-  border-radius: 1rem;
+  border-radius: 1rem 0;
 }
 .warning {
   max-width: 60%;
-  background-color: white;
-  border-radius: 3.8rem 0;
-  padding: 1rem;
-
-  &__title {
-    margin-top: 0;
-    padding-top: 0.4rem;
-    border-top: 0.9rem solid #ffde29;
-    border-top-left-radius: 3.1rem;
-  }
-  &__text {
-    text-align: left;
-    margin: 2rem -0.5rem 1rem 8rem;
-    padding: 0;
-  }
-  &__info {
-    width: 6rem;
-    padding: 1rem;
-    float: left;
-    margin-top: -1.25rem;
-    margin-left: -0.2rem;
-    margin-right: 2rem;
-    background-color: #ffde29;
-    border-radius: 3.8rem 0;
-  }
 }
-
 .swiper {
   &-container {
     width: 70%;
@@ -235,6 +222,7 @@ td {
   }
 }
 .columns {
+  background-color: #fff;
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 0 -10rem -5rem;
@@ -276,6 +264,16 @@ ul a {
   padding-bottom: 4rem;
   background-color: #ffde29;
   text-align: center;
+
+  &__text {
+    color: #000000;
+    font-size: 2.9rem;
+  }
+  &__a {
+    color: #000000;
+    text-align: center;
+    text-decoration: underline;
+  }
 }
 
 @media (max-width: 480px) {
@@ -287,7 +285,6 @@ ul a {
   }
   .hamburger {
     display: block;
-    cursor: pointer;
   }
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
@@ -353,17 +350,23 @@ ul a {
     margin: 0;
     z-index: 1;
   }
+  .intro {
+    margin-bottom: 5rem;
+  }
   .services {
     grid-template-columns: 1fr;
     padding: 0;
   }
   .repair {
     &__list {
-      padding: 0;
+      padding: 0 2rem;
     }
   }
   .prices {
     width: 40rem;
+  }
+  .warning {
+    max-width: 80%;
   }
   .swiper-container {
     max-width: 30rem;
@@ -383,8 +386,7 @@ ul a {
     padding: 1rem;
   }
 }
-
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
   body {
     font-size: 1.5rem;
   }
@@ -393,27 +395,31 @@ ul a {
   }
   .main-menu {
     font-size: 2rem;
-
+    
     &__list {
       display: flex;
       max-width: 100vw;
-      overflow: scroll;
-      margin-left: -3rem;
     }
     &__link {
       padding: 1rem;
     }
   }
   .logo {
-    font-size: 4rem;
-    margin: 2rem 0 0 -2.2rem;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    z-index: 1;
+  }
+  .intro {
+    margin-bottom: 10rem;
   }
   .services {
     grid-template-columns: 1fr 1fr;
     padding: 0;
   }
   .repair {
-    background-image: none;
 
     &__list {
       padding: 2rem;
@@ -422,25 +428,30 @@ ul a {
   .prices {
     width: 60rem;
   }
+  .warning {
+    max-width: 80%;
+  }
   .swiper-container {
     max-width: 45rem;
     margin-top: 1rem;
+    margin-right: 10rem;
     margin-bottom: 9rem;
   }
   .columns {
-    grid-template-columns: 100%;
+    grid-template-columns: 50% 50%;
   }
   .contacts {
     margin-left: 9rem;
   }
   .map {
-    height: 60vw;
+    height: 50vw;
   }
   .footer {
     padding: 1rem;
   }
 }
-@media (min-width: 769px) and (max-width: 1024px) {
-}
-@media (min-width: 1025px) and (max-width: 1200px) {
+@media (max-width: 1024px) {
+  .contacts {
+    margin-left: 5rem;
+  }
 }
