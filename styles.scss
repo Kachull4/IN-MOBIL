@@ -170,11 +170,18 @@ header {
 
   &__list {
     padding-right: 50%;
-    list-style-image: url(/Images/list_ico.svg);
+    list-style: none;
   }
   &__item {
     padding: 1rem;
     border-bottom: 0.2rem dashed rgba(0, 0, 0, 0.1);
+  }
+  &__ico {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2rem;
+    margin-left: -4rem;
+    margin-right: 0.7rem;
   }
 }
 .prices {
@@ -280,11 +287,15 @@ ul a {
   body {
     font-size: 1.3rem;
   }
+  .header {
+    padding-top: 5rem;
+  }
   .section {
     padding: 3rem;
   }
   .hamburger {
     display: block;
+    margin-left: auto;
   }
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
@@ -306,6 +317,10 @@ ul a {
     font-size: 2rem;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
 
+    &__container {
+      width: 100%;
+      display: flex;
+    }
     &__list {
       display: flex;
       justify-content: space-between;
@@ -349,24 +364,36 @@ ul a {
     text-align: center;
     margin: 0;
     z-index: 1;
+    padding: 1.35rem;
   }
   .intro {
+    width: 100%;
+    font-size: 2.5rem;
+    padding: 0 3rem;
     margin-bottom: 5rem;
+    margin-left: 0;
   }
   .services {
     grid-template-columns: 1fr;
     padding: 0;
   }
   .repair {
+    background: url(/Images/transition-top-right.svg) center top/100% auto
+        no-repeat,
+      url(/Images/transition-bottom-right.svg) center bottom/100% auto no-repeat;
+
     &__list {
       padding: 0 2rem;
     }
   }
   .prices {
-    width: 40rem;
+    &__table-container {
+      overflow-x: auto;
+      width: 100%;
+    }
   }
   .warning {
-    max-width: 80%;
+    max-width: 100%;
   }
   .swiper-container {
     max-width: 30rem;
@@ -377,7 +404,13 @@ ul a {
     grid-template-columns: 100%;
   }
   .contacts {
-    margin-left: 9rem;
+    &__list {
+      margin-left: 5rem;
+    }
+    &__img {
+      width: 3rem;
+      padding: 0.8rem;
+    }
   }
   .map {
     height: 50vw;
@@ -386,20 +419,19 @@ ul a {
     padding: 1rem;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   body {
     font-size: 1.5rem;
+  }
+  .header {
+    padding-top: 7rem;
   }
   .section {
     padding: 3rem;
   }
   .main-menu {
     font-size: 2rem;
-    
-    &__list {
-      display: flex;
-      max-width: 100vw;
-    }
+
     &__link {
       padding: 1rem;
     }
@@ -413,6 +445,7 @@ ul a {
     z-index: 1;
   }
   .intro {
+    font-size: 3.5rem;
     margin-bottom: 10rem;
   }
   .services {
@@ -420,6 +453,9 @@ ul a {
     padding: 0;
   }
   .repair {
+    background: url(/Images/transition-top-right.svg) center top/100% auto
+      no-repeat,
+    url(/Images/transition-bottom-right.svg) center bottom/100% auto no-repeat;
 
     &__list {
       padding: 2rem;
@@ -429,16 +465,16 @@ ul a {
     width: 60rem;
   }
   .warning {
-    max-width: 80%;
+    max-width: 100%;
   }
   .swiper-container {
     max-width: 45rem;
     margin-top: 1rem;
     margin-right: 10rem;
-    margin-bottom: 9rem;
   }
   .columns {
     grid-template-columns: 50% 50%;
+    margin-bottom: 2rem;
   }
   .contacts {
     margin-left: 9rem;
@@ -448,10 +484,5 @@ ul a {
   }
   .footer {
     padding: 1rem;
-  }
-}
-@media (max-width: 1024px) {
-  .contacts {
-    margin-left: 5rem;
   }
 }
