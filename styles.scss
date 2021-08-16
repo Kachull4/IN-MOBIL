@@ -361,24 +361,37 @@ header {
 }
 .prices {
   &__table {
-    border-spacing: 0;
     margin-bottom: 5rem;
   }
   &__item {
+    display: inline-block;
     color: #535353;
-    padding: 0 1.5rem;
     text-align: center;
 
     &:not(:last-child) {
       border-right: 0.2rem dashed rgba(0, 0, 0, 0.1);
     }
   }
+  &__price {
+    color: #000;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 3rem 2rem;
+    padding: 0.5rem 0.8rem;
+    background-color: #ffde29;
+    border-radius: 1rem 0;
+  }
 }
 @media (max-width: 480px) {
   .prices {
     &__table-container {
       overflow-x: auto;
-      width: 100%;
+    }
+    &__table {
+      display: flex;
+    }
+    &__item {
+      flex-shrink: 0;
     }
   }
 }
@@ -391,17 +404,6 @@ header {
   font-size: 2.2rem;
   width: min-content;
   display: inline-block;
-}
-.price {
-  display: inline-block;
-  color: #000;
-  font-weight: 600;
-  font-size: 1.4rem;
-  margin-top: 0;
-  padding: 0.5rem 0.8rem;
-  text-align: center;
-  background-color: #ffde29;
-  border-radius: 1rem 0;
 }
 .warning {
   max-width: 60%;
@@ -484,7 +486,7 @@ header {
 @media (max-width: 480px) {
   .contacts {
     &__list {
-      margin-left: 5rem;
+      margin-left: 10rem;
     }
     &__img {
       width: 3rem;
