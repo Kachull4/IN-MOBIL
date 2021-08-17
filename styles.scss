@@ -66,7 +66,7 @@ nav a {
     font-size: 2.3rem;
     font-weight: 600;
     color: white;
-    border-bottom: 1rem solid #ffde29;
+    border-bottom: 1rem solid #FFE234;
   }
   &--h2 {
     font-weight: 300;
@@ -186,7 +186,7 @@ header {
     border-bottom: 1rem solid transparent;
   }
   &__link:hover {
-    border-bottom-color: #ffde29;
+    border-bottom-color: #FFE234;
   }
 }
 @media (max-width: 480px) {
@@ -281,7 +281,7 @@ header {
     flex-direction: column;
     justify-content: center;
     padding-left: 1rem;
-    border-top: 0.9rem solid #ffde29;
+    border-top: 0.9rem solid #FFE234;
     flex: 1;
   }
   &__item {
@@ -294,8 +294,7 @@ header {
   }
   &__icon {
     width: 6rem;
-    padding: 1rem;
-    background-color: #ffde29;
+    background-color: #FFE234;
     border-radius: 3.1rem 0;
   }
   &__description {
@@ -378,7 +377,7 @@ header {
     font-size: 1.4rem;
     margin: 3rem 2rem;
     padding: 0.5rem 0.8rem;
-    background-color: #ffde29;
+    background-color: #FFE234;
     border-radius: 1rem 0;
   }
 }
@@ -476,10 +475,9 @@ header {
   &__img {
     display: inline-block;
     vertical-align: middle;
-    width: 2em;
-    background-color: #ffde29;
+    width: 3.5rem;
+    background-color: #FFE234;
     border-radius: 2rem 0;
-    padding: 1rem;
     margin: -0.5em 1em -0.5em -3.3em;
   }
 }
@@ -490,7 +488,6 @@ header {
     }
     &__img {
       width: 3rem;
-      padding: 0.8rem;
     }
   }
 }
@@ -520,7 +517,7 @@ ul a {
 .footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  background-color: #ffde29;
+  background-color: #FFE234;
   text-align: center;
 
   &__text {
