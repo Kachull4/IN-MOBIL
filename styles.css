@@ -54,6 +54,7 @@ nav a {
 
 .section--contacts {
   background-color: #fff;
+  overflow: hidden;
 }
 
 @media (max-width: 480px) {
