@@ -93,7 +93,7 @@ header {
   min-height: 30vw;
   background: url(/Images/transition-bottom-left.svg) center bottom/100% auto
       no-repeat,
-    $text url(/Images/header.png) center bottom/cover no-repeat;
+    $text url(/Images/header.webp) center bottom/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -320,7 +320,7 @@ header {
   background: url(/Images/transition-top-right.svg) center top/100% auto
       no-repeat,
     url(/Images/transition-bottom-right.svg) center bottom/100% auto no-repeat,
-    url(/Images/repair3.png) right top/50% auto no-repeat;
+    url(/Images/repair3.webp) right top/50% auto no-repeat;
 
   &__list {
     padding-right: 50%;
