@@ -213,6 +213,7 @@ header {
     height: 5rem;
     padding: 0 1rem;
     font-size: 2rem;
+    
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
 
     &__container {
@@ -420,6 +421,7 @@ header {
 }
 .swiper {
   &-container {
+    z-index: 0;
     width: 70%;
     img {
       width: 100%;
