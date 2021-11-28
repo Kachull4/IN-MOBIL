@@ -38,3 +38,11 @@ function initMap() {
     map: map,
   });
 }
+var menuLinks = document.querySelectorAll(".main-menu__link");
+menuLinks.forEach(function (menuLink) {
+  menuLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    var linkHref = menuLink.getAttribute("href");
+    document.querySelector(linkHref).scrollIntoView({ behavior: "smooth" });
+  });
+});
